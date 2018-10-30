@@ -7,16 +7,16 @@ class UsersController < ApplicationController
   def create_form
     User.create!(username: params["user_username"], email: params["user_email"], bio: params["user_bio"])
   end
-  def new_form_tag
+  def new_tag
     @user=User.new
   end
-  def create_form_tag
+  def create_tag
     User.create!(username: params[:username], email: params[:email], bio: params[:bio])
   end
-  def new_form_for
+  def new_for
     @user=User.new
   end
-  def create_form_for
+  def create_for
     User.create!(username: params[:user][:username], email: params[:user][:email], bio: params[:user][:bio])
     redirect_to('/new')
   end
